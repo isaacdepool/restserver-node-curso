@@ -9,7 +9,7 @@ const _ = require('underscore');
 const {verificarToken, verificarAdmin_Role} = require('../middlewares/auth');
 
 app.get('/usuario', verificarToken, (req, res) =>{
-
+ 
     let desde = req.query.desde || 0;
     desde = Number(desde);
 

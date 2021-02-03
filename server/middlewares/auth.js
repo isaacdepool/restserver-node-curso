@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 // ==================
 //   Verificar token
 // ==================
-
+ 
 let verificarToken = (req, res, next) =>{
 
     let token = req.get('auth');
@@ -32,7 +32,6 @@ let verificarToken = (req, res, next) =>{
 let verificarAdmin_Role = (req, res, next) =>{
 
     let usuario = req.usuario;
-    console.log(usuario.role);
 
     if(usuario.role === 'ADMIN_ROLE'){
         next();
